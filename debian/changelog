@@ -1,0 +1,15 @@
+biblepay (1.8.0.2-1) xenial; urgency=low
+  * New release
+ -- Lichtsucher <lichtsucher@maxolero.net>  Thu, 17 Jan 2018 22:14:04 +0100
+
+biblepay (1.8.0.1b-3) xenial; urgency=low
+  * Some small change, again
+ -- Lichtsucher <lichtsucher@maxolero.net>  Thu, 17 Jan 2018 17:16:04 +0100
+
+biblepay (1.8.0.1b-2) xenial; urgency=low
+  * Some small change
+ -- Lichtsucher <lichtsucher@maxolero.net>  Thu, 17 Jan 2018 17:16:04 +0100
+
+biblepay (1.8.0.1b-1) xenial; urgency=low
+  * First debian release
+ -- Lichtsucher <lichtsucher@maxolero.net>  Thu, 17 Jan 2018 17:16:04 +0100
