@@ -1,4 +1,4 @@
-[my-ppa]
+[biblepay]
 fqdn = ppa.launchpad.net
 method = ftp
 incoming = ~<your_user-or-team-launchpad_id>/ubuntu/<ppa_name>/

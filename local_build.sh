@@ -3,6 +3,8 @@
 # get the absolute path to this script. Required to mount the "packages" directory
 BASEDIR="$( cd "$(dirname "$0")" ; pwd -P )"
 
+
+
 # ensure that the changelog is ok
 
 echo ""
@@ -32,8 +34,8 @@ read VERSIONSTR
 
 echo "Entered $VERSIONSTR"
 
-# final check
 
+# final check
 while true; do
     echo ""
     echo ""
@@ -45,10 +47,41 @@ while true; do
     esac
 done
 
-# build the docker image, won't execute any code
-docker build -t debpackage .
 
-mkdir -p $BASEDIR/packages
+# output directory for the deb-files
+# The ppa_orig directory saves the old ppa files, so that we do not change them between uploads
+mkdir -p $BASEDIR/packages/
 
-# start the docker image with some required volumes and starts the build process itsels
-docker run -it -e VERSIONSTR="$VERSIONSTR" -v $BASEDIR/packages:/packages -v $HOME/.gnupg:/root/.gnupg -v $BASEDIR/debian:/debian  debpackage /bin/sh /code/run_local_build.sh
+
+# read the ubuntu version from the file and put it into an array
+# we need to have an own step here, or the loop would stop the tty, which we need for docker
+while read release; do
+  releases+=("$release")
+done < ubuntu_releases
+
+# build a version of the package for every given ubuntu release
+for line in "${releases[@]}"; do
+  # nice trick that splits the string "xenial|16.04" into "xenial" and "16.04"
+  RELEASENAME=${line%|*}
+  RELEASEVERSION=${line#*|}
+
+  echo "Build package for $RELEASENAME / $RELEASEVERSION"
+
+  # create a temp folder and place a release-specific Dockerfile there
+  sed 's/\[releaseversion\]/16.04/g' Dockerfile.tpl  > Dockerfile
+
+  # build the docker image, won't execute any code
+  docker build -t "debpackage-$RELEASENAME" .
+
+  # start the docker image with some required volumes and starts the build process itselfs
+  # we do one buildprocess per ubuntu version
+  docker run -it -e RELEASENAME="$RELEASENAME" -e RELEASEVERSION="$RELEASEVERSION" -e VERSIONSTR="$VERSIONSTR" -v $BASEDIR/packages:/packages -v $HOME/.gnupg:/root/.gnupg -v $BASEDIR/debian:/debian "debpackage-$RELEASENAME" /bin/sh /code/run_local_build.sh
+
+  # cleanup
+  rm -f Dockerfile
+done
+
+
+
+
+

@@ -1,11 +1,13 @@
-FROM ubuntu:16.04
+# this file file will be changed by local_build.sh and ppa_build.pa, for that reason there is a placeholder! -> [releaseversion]
+# Do NOT change [releaseversion]
+FROM ubuntu:[releaseversion]
 
 # install all dependencies
 RUN apt-get update && \
     apt-get install -y software-properties-common && \
     add-apt-repository -y ppa:bitcoin/bitcoin && \
     apt-get update && \
-    apt-get install -y mc libdb4.8-dev libdb4.8++-dev automake debhelper bash-completion libqrencode-dev bsdmainutils \
+    apt-get install -y mc wget zip unzip libdb4.8-dev libdb4.8++-dev automake debhelper bash-completion libqrencode-dev bsdmainutils \
                        g++ git make build-essential autoconf libtool pkg-config libboost-all-dev libssl-dev libevent-dev \
                        libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools \
                        libprotobuf-dev protobuf-compiler debmake && apt-get clean 
