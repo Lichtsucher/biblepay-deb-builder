@@ -62,7 +62,7 @@ allow_unsigned_uploads = 0
 Change <your_user-or-team-launchpad_id> and <ppa_name> to your own values.
 (This file will be used as dput.cf and copied to /root/ in the docker image)
 
-# Build for ppa
+## Build for ppa
 
 Before you can build a new version, you must update the file "debian/changelog" and add a new entry to the file. Important: Newer entries are at the TOP!
 

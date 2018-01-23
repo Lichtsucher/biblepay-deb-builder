@@ -11,8 +11,8 @@ if [ ! -f /packages/ppa_orig/biblepay_$VERSIONSTR.orig.tar.bz2 ]; then
   echo "No existing orig-file found, clone from git"
 
   # we clone of the biblepay sourcecode here
-  #git clone https://github.com/biblepay/biblepay biblepay
-  git clone https://github.com/Lichtsucher/biblepay
+  git clone https://github.com/biblepay/biblepay biblepay
+  #git clone https://github.com/Lichtsucher/biblepay
 
   # we build the "orignal source" from the cloned git repository (excluding the git files)
   cd /code/biblepay

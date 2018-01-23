@@ -2,8 +2,8 @@
 rm -rf /code/*
 
 # we clone of the biblepay sourcecode here
-#git clone https://github.com/biblepay/biblepay biblepay
-git clone https://github.com/Lichtsucher/biblepay
+git clone https://github.com/biblepay/biblepay biblepay
+#git clone https://github.com/Lichtsucher/biblepay
 
 cd /code/biblepay
 

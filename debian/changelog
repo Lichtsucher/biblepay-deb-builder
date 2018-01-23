@@ -1,27 +1,15 @@
-biblepay (1.8.0.2b-[release]1) [release]; urgency=low
-  * fix on server that requires a reupload
- -- Lichtsucher <lichtsucher@maxolero.net>  Thu, 18 Jan 2018 13:15:04 +0100
+biblepay (1.0.8.4-[release]1) [release]; urgency=low
+  * New upstream release
+ -- Lichtsucher <lichtsucher@maxolero.net>  Thu, 22 Jan 2018 20:33:00 +0100
 
-biblepay (1.8.0.2a-[release]1) [release]; urgency=low
-  * another test release
- -- Lichtsucher <lichtsucher@maxolero.net>  Thu, 18 Jan 2018 13:15:04 +0100
+biblepay (1.0.8.3c-[release]1) [release]; urgency=low
+  * New upstream release
+ -- Lichtsucher <lichtsucher@maxolero.net>  Thu, 20 Jan 2018 11:26:00 +0100
 
-biblepay (1.8.0.2-[release]2) [release]; urgency=low
-  * test for different versions per release
- -- Lichtsucher <lichtsucher@maxolero.net>  Thu, 18 Jan 2018 13:15:04 +0100
+biblepay (1.0.8.2-[release]1) [release]; urgency=low
+  * New upstream release
+ -- Lichtsucher <lichtsucher@maxolero.net>  Thu, 19 Jan 2018 09:02:04 +0100
 
-biblepay (1.8.0.2-[release]1) [release]; urgency=low
-  * New release
- -- Lichtsucher <lichtsucher@maxolero.net>  Thu, 17 Jan 2018 22:14:04 +0100
-
-biblepay (1.8.0.1b-[release]3) [release]; urgency=low
-  * Some small change, again
- -- Lichtsucher <lichtsucher@maxolero.net>  Thu, 17 Jan 2018 17:16:04 +0100
-
-biblepay (1.8.0.1b-[release]2) [release]; urgency=low
-  * Some small change
- -- Lichtsucher <lichtsucher@maxolero.net>  Thu, 17 Jan 2018 17:16:04 +0100
-
-biblepay (1.8.0.1b-[release]1) [release]; urgency=low
+biblepay (1.0.8.1b-[release]1) [release]; urgency=low
   * First debian release
  -- Lichtsucher <lichtsucher@maxolero.net>  Thu, 17 Jan 2018 17:16:04 +0100
