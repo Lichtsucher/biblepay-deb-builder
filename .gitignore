@@ -1,3 +1,4 @@
 ppa.conf
 packages/
 Dockerfile
+last_nightly_commit.data

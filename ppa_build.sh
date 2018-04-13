@@ -5,7 +5,7 @@ BASEDIR="$( cd "$(dirname "$0")" ; pwd -P )"
 
 
 
-# ensure that the changelog is ok
+# '" ensure that the changelog is ok
 
 echo ""
 echo "Before you start, ensure that you updated debian/changelog! Here are the first 20 lines:"
