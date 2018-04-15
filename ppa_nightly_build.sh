@@ -14,7 +14,7 @@ cd bbp_nightly_repository
 git pull origin master
 cd ..
 
-CURRENT_VERSION=`git rev-parse HEAD`
+CURRENT_VERSION=`cd bbp_nightly_repository && git rev-parse HEAD`
 echo $CURRENT_VERSION
 
 touch last_nightly_commit.data

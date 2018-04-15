@@ -2,3 +2,5 @@ ppa.conf
 packages/
 Dockerfile
 last_nightly_commit.data
+bbp_nightly_repository/
+debian/changelog.save
