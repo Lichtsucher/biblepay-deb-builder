@@ -61,7 +61,7 @@ for line in "${releases[@]}"; do
 
   # start the docker image with some required volumes and starts the build process itselfs
   # we do one buildprocess per ubuntu version
-  docker run -it -e RELEASENAME="$RELEASENAME" -e RELEASEVERSION="$RELEASEVERSION" -e VERSIONSTR="$CURRENT_DATE" -v $BASEDIR/packages:/packages -v $HOME/.gnupg:/root/.gnupg -v $BASEDIR/debian:/debian "debpackage-$RELEASENAME" /bin/sh /code/run_ppa_build.sh
+  docker run -i -e RELEASENAME="$RELEASENAME" -e RELEASEVERSION="$RELEASEVERSION" -e VERSIONSTR="$CURRENT_DATE" -v $BASEDIR/packages:/packages -v $HOME/.gnupg:/root/.gnupg -v $BASEDIR/debian:/debian "debpackage-$RELEASENAME" /bin/sh /code/run_ppa_build.sh
 
   # cleanup
   rm -f Dockerfile
